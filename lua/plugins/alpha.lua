@@ -140,7 +140,7 @@ local function header_color()
 end
 
 local function configure()
-	local theme = require("alpha.themes.dashboard")
+	local theme = require("alpha.themes.theta")
 	local themeconfig = theme.config
 	local dashboard = require("alpha.themes.dashboard")
 	local buttons = {
