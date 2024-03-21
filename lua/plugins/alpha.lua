@@ -19,16 +19,6 @@ local coolLines = {
 	[[╚══════╝   ╚═╝    ╚═════╝ ╚═╝     ╚═╝     ]],
 }
 
-local solveLines = {
-	[[╔═╗┬┬─┐┌─┐┌┬┐  ┌─┐┌─┐┬ ┬  ┬┌─┐  ┌┬┐┬ ┬┌─┐  ┌─┐┬─┐┌─┐┌┐ ┬  ┌─┐┌┬┐   ]],
-	[[╠╣ │├┬┘└─┐ │   └─┐│ ││ └┐┌┘├┤    │ ├─┤├┤   ├─┘├┬┘│ │├┴┐│  ├┤ │││   ]],
-	[[╚  ┴┴└─└─┘ ┴┘  └─┘└─┘┴─┘└┘ └─┘   ┴ ┴ ┴└─┘  ┴  ┴└─└─┘└─┘┴─┘└─┘┴ ┴ o ]],
-	[[      ╔╦╗┬ ┬┌─┐┌┐┌  ┬ ┬┬─┐┬┌┬┐┌─┐  ┌┬┐┬ ┬┌─┐  ┌─┐┌─┐┌┬┐┌─┐         ]],
-	[[       ║ ├─┤├┤ │││  │││├┬┘│ │ ├┤    │ ├─┤├┤   │  │ │ ││├┤          ]],
-	[[       ╩ ┴ ┴└─┘┘└┘  └┴┘┴└─┴ ┴ └─┘   ┴ ┴ ┴└─┘  └─┘└─┘─┴┘└─┘         ]],
-	[[                                                     - John Johnson]],
-}
-
 local humourLines = {
 	[[╔═╗┌─┐┌┬┐┌─┐  ┬┌─┐  ┬  ┬┬┌─┌─┐  ┬ ┬┬ ┬┌┬┐┌─┐┬─┐                           ]],
 	[[║  │ │ ││├┤   │└─┐  │  │├┴┐├┤   ├─┤│ │││││ │├┬┘                           ]],
@@ -40,45 +30,6 @@ local humourLines = {
 	[[                                                        │ │ └─┐  ├┴┐├─┤ ││]],
 	[[                                                        ┴ ┴ └─┘  └─┘┴ ┴─┴┘]],
 	[[                                                              - Cory House]],
-}
-
-local bugLines = {
-	[[  _____   _                          _                 _                             ]],
-	[[ |_   _| | |_    ___   _ _   ___    (_)  ___    __ _  | | __ __ __  __ _   _  _   ___]],
-	[[   | |   | ' \  / -_) | '_| / -_)   | | (_-<   / _` | | | \ V  V / / _` | | || | (_-<]],
-	[[   |_|   |_||_| \___| |_|   \___|   |_| /__/   \__,_| |_|  \_/\_/  \__,_|  \_, | /__/]],
-	[[                                                                           |__/      ]],
-	[[                                                   _                                 ]],
-	[[  ___   _ _    ___     _ __    ___   _ _   ___    | |__   _  _   __ _                ]],
-	[[ / _ \ | ' \  / -_)   | '  \  / _ \ | '_| / -_)   | '_ \ | || | / _` |               ]],
-	[[ \___/ |_||_| \___|   |_|_|_| \___/ |_|   \___|   |_.__/  \_,_| \__, |               ]],
-	[[                                                                |___/                ]],
-	[[  _              __   _                                                              ]],
-	[[ | |_   ___     / _| (_) __ __                                                       ]],
-	[[ |  _| / _ \   |  _| | | \ \ /  _                                                    ]],
-	[[  \__| \___/   |_|   |_| /_\_\ (_)                                     - Ellen Ullman]],
-}
-
-local fixLines = {
-	[[    ┌─┐┬─┐ ┬  ┌┬┐┬ ┬┌─┐  ┌─┐┌─┐┬ ┬┌─┐┌─┐      ]],
-	[[    ├┤ │┌┴┬┘   │ ├─┤├┤   │  ├─┤│ │└─┐├┤       ]],
-	[[    └  ┴┴ └─   ┴ ┴ ┴└─┘  └─┘┴ ┴└─┘└─┘└─┘┘     ]],
-	[[╔╗╔╔═╗╔╦╗  ╔╦╗╦ ╦╔═╗  ╔═╗╦ ╦╔╦╗╔═╗╔╦╗╔═╗╔╦╗╔═╗]],
-	[[║║║║ ║ ║    ║ ╠═╣║╣   ╚═╗╚╦╝║║║╠═╝ ║ ║ ║║║║╚═╗]],
-	[[╝╚╝╚═╝ ╩    ╩ ╩ ╩╚═╝  ╚═╝ ╩ ╩ ╩╩   ╩ ╚═╝╩ ╩╚═╝]],
-	[[                              - Steve Maguire ]],
-}
-
-local processLines = {
-	[[╔╦╗╦ ╦╔═╗  ╔═╗╦═╗╔═╗╔═╗╔╦╗╦╦  ╦╔═╗  ╔═╗╦═╗╔═╗╔═╗╔═╗╔═╗╔═╗]],
-	[[ ║ ╠═╣║╣   ║  ╠╦╝║╣ ╠═╣ ║ ║╚╗╔╝║╣   ╠═╝╠╦╝║ ║║  ║╣ ╚═╗╚═╗]],
-	[[ ╩ ╩ ╩╚═╝  ╚═╝╩╚═╚═╝╩ ╩ ╩ ╩ ╚╝ ╚═╝  ╩  ╩╚═╚═╝╚═╝╚═╝╚═╝╚═╝]],
-	[[This is Amazing!]],
-	[[This is difficult]],
-	[[This is shit]],
-	[[I am shit]],
-	[[This might be OK]],
-	[[This is Amazing!]],
 }
 
 local pepeDrinkLines = {
@@ -151,14 +102,10 @@ local function lineColor(lines, popStart, popEnd)
 end
 
 local headers = {
-	lineColor(coolLines, 6, 12),
-	--lineColor(solveLines, 0, 0),
+	lineColor(coolLines, 6, 11),
 	lineColor(humourLines, 6, 9),
-	--lineColor(bugLines, 5, 10),
-	--lineColor(processLines, 0, 3),
-	--lineColor(fixLines, 0, 0),
-	lineColor(pepeDrinkLines, 0, 6),
-	lineColor(pepePunchLines, 0, 6),
+	lineColor(pepeDrinkLines, 0, 11),
+	lineColor(pepePunchLines, 0, 11),
 }
 
 local function header_chars()
@@ -193,7 +140,7 @@ local function header_color()
 end
 
 local function configure()
-	local theme = require("alpha.themes.theta")
+	local theme = require("alpha.themes.dashboard")
 	local themeconfig = theme.config
 	local dashboard = require("alpha.themes.dashboard")
 	local buttons = {
