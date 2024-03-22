@@ -149,7 +149,7 @@ local function configure()
 			{ type = "text", val = "Quick links", opts = { hl = "SpecialComment", position = "center" } },
 			{ type = "padding", val = 1 },
 			dashboard.button("e", "  New file", "<cmd>ene<CR>"),
-			dashboard.button("CTRL C", "  Find file"),
+			dashboard.button("CTRL p", "  Find file"),
 			dashboard.button("SPC fg", "  Find text"),
 			dashboard.button("u", "󱐥  Update plugins", "<cmd>Lazy sync<CR>"),
 			dashboard.button("t", "  Install language tools", "<cmd>Mason<CR>"),
