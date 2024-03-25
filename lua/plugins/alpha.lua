@@ -102,10 +102,10 @@ local function lineColor(lines, popStart, popEnd)
 end
 
 local headers = {
-	lineColor(coolLines, 6, 11),
-	lineColor(humourLines, 6, 9),
+--	lineColor(coolLines, 6, 11),
+--	lineColor(humourLines, 6, 9),
 	lineColor(pepeDrinkLines, 0, 11),
-	lineColor(pepePunchLines, 0, 11),
+--	lineColor(pepePunchLines, 0, 11),
 }
 
 local function header_chars()
