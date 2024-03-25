@@ -52,6 +52,7 @@ return {
                     "pug",
                     "typescriptreact",
                     "vue",
+                    "php",
                 },
                 init_options = {
                     html = {
