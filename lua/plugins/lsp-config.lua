@@ -85,7 +85,12 @@ return {
             lspconfig.intelephense.setup({
                 cmd = { "intelephense", "--stdio" },
                 filetypes = { "php" },
-                root_dir = lspconfig.util.root_pattern("", ".git"),
+                root_dir = function (pattern)
+                    local cwd = vim.loop.cwd()
+                    local root = lspconfig.util.root_pattern('composer.json', '.git')(pattern)
+
+                    return lspconfig.util.path.is_descendant(cwd, root) and cwd or root
+                end,
             })
             lspconfig.sqlls.setup({})
             lspconfig.lemminx.setup({})
