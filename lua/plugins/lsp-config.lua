@@ -22,6 +22,7 @@ return {
                     "lemminx",
                     "html",
                     "emmet_ls",
+                    "golangci_lint_ls",
                 },
             })
         end,
@@ -30,6 +31,7 @@ return {
         "neovim/nvim-lspconfig",
         config = function()
             local lspconfig = require("lspconfig")
+
             lspconfig.emmet_ls.setup({
                 capabilities = {
                     textDocument = {
@@ -68,11 +70,17 @@ return {
                 },
             })
             lspconfig.bashls.setup({})
+
             lspconfig.cssls.setup({})
+
             lspconfig.dockerls.setup({})
+
             lspconfig.docker_compose_language_service.setup({})
+
             lspconfig.jsonls.setup({})
+
             lspconfig.quick_lint_js.setup({})
+
             lspconfig.lua_ls.setup({
                 settings = {
                     Lua = {
@@ -82,6 +90,7 @@ return {
                     },
                 },
             })
+
             lspconfig.intelephense.setup({
                 cmd = { "intelephense", "--stdio" },
                 filetypes = { "php" },
@@ -92,8 +101,15 @@ return {
                     return lspconfig.util.path.is_descendant(cwd, root) and cwd or root
                 end,
             })
+
             lspconfig.sqlls.setup({})
+
             lspconfig.lemminx.setup({})
+
+            lspconfig.golangci_lint_ls.setup({
+
+            })
+
             lspconfig.html.setup({
                 capabilities = vim.lsp.protocol.make_client_capabilities(),
                 cmd = { "vscode-html-language-server", "--stdio" },
