@@ -9,8 +9,8 @@ return {
 				null_ls.builtins.formatting.prettier,
 				null_ls.builtins.formatting.phpcbf,
 				null_ls.builtins.diagnostics.phpcs,
-                null_ls.builtins.formatting.golangci-lint
-
+                null_ls.builtins.formatting.gofmt,
+                null_ls.builtins.diagnostics.golangci_lint,
 			},
 		})
 		vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
