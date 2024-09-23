@@ -22,7 +22,6 @@ return {
                     "lemminx",
                     "html",
                     "emmet_ls",
-                    "golangci_lint_ls",
                 },
             })
         end,
@@ -43,18 +42,14 @@ return {
                     },
                 },
                 filetypes = {
-                    "css",
                     "html",
                     "javascript",
                     "less",
                     "javascriptreact",
-                    "sass",
-                    "scss",
                     "svelte",
                     "pug",
                     "typescriptreact",
                     "vue",
-                    "php",
                 },
                 init_options = {
                     html = {
@@ -71,7 +66,20 @@ return {
             })
             lspconfig.bashls.setup({})
 
-            lspconfig.cssls.setup({})
+            lspconfig.cssls.setup({
+                capabilities = {
+                    textDocument = {
+                        completion = {
+                            completionItem = {
+                                snippetSupport = true,
+                            },
+                        },
+                    },
+                },
+                filetypes = {
+                    "css",
+                },
+            })
 
             lspconfig.dockerls.setup({})
 
@@ -94,7 +102,7 @@ return {
             lspconfig.intelephense.setup({
                 cmd = { "intelephense", "--stdio" },
                 filetypes = { "php" },
-                root_dir = function (pattern)
+                root_dir = function(pattern)
                     local cwd = vim.loop.cwd()
                     local root = lspconfig.util.root_pattern('composer.json', '.git')(pattern)
 
@@ -105,10 +113,6 @@ return {
             lspconfig.sqlls.setup({})
 
             lspconfig.lemminx.setup({})
-
-            lspconfig.golangci_lint_ls.setup({
-
-            })
 
             lspconfig.html.setup({
                 capabilities = vim.lsp.protocol.make_client_capabilities(),
