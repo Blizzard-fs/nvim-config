@@ -1,8 +1,8 @@
 return {
     "akinsho/toggleterm.nvim",
     version = "*",
-    config = function ()
-        require("toggleterm").setup{}
+    config = function()
+        require("toggleterm").setup {}
         vim.keymap.set('t', '<esc>', [[<C-\><C-n>]], {})
         vim.keymap.set('t', 'jk', [[<C-\><C-n>]], {})
         vim.keymap.set('t', '<C-h>', [[<Cmd>wincmd h<CR>]], {})
@@ -10,6 +10,6 @@ return {
         vim.keymap.set('t', '<C-k>', [[<Cmd>wincmd k<CR>]], {})
         vim.keymap.set('t', '<C-l>', [[<Cmd>wincmd l<CR>]], {})
         vim.keymap.set('t', '<C-w>', [[<C-\><C-n><C-w>]], {})
-		vim.keymap.set("n", "<C-t>", ":ToggleTerm<CR>", {})
+        vim.keymap.set("n", "<C-t>", ":ToggleTerm<CR>", {})
     end,
 }

@@ -92,8 +92,8 @@ return {
                 formatting = {
                     -- Use lspkind for completion icons
                     format = lspkind.cmp_format({
-                        mode = "symbol_text", -- Show icons and text
-                        maxwidth = 50, -- Prevent the popup from getting too large
+                        mode = "symbol_text",  -- Show icons and text
+                        maxwidth = 50,         -- Prevent the popup from getting too large
                         ellipsis_char = "...", -- Truncate the text if too long
                     }),
                 },
