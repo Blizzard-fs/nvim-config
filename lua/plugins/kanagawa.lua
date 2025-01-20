@@ -1,4 +1,4 @@
-return{
+return {
     "rebelot/kanagawa.nvim",
     name = "kanagawa",
     priority = 1,
@@ -11,19 +11,21 @@ return{
             keywordStyle = { italic = true},
             statementStyle = { bold = true },
             typeStyle = {},
-            transparent = false,
+            transparent = true,
             dimInactive = false,
             terminalColors = true,
             colors = {
-                palette = {},
+                palette = {
+                    bg = "#1f1f1f",
+                },
                 theme = { wave = {}, lotus = {}, dragon = {}, all = {} },
             },
             overrides = function()
-            return {
-                Normal = { bg = "#262626" }, -- Set the background explicitly
-                NormalFloat = { bg = "#262626" }, -- Set floating window background
-                FloatBorder = { bg = "#262626" }, -- Set border to match
-            }
+                return {
+                    Normal = { bg = "#1f1f1f"},
+                    NormalFloat = { bg = "#1f1f1f" },
+                    FloatBorder = { bg = "#1f1f1f" },
+                }
             end,
             theme = "wave",
             background = {
@@ -32,6 +34,10 @@ return{
             },
         })
 
-        vim.cmd("colorscheme kanagawa-wave")
-        end,
-    }
+        vim.cmd("colorscheme kanagawa")
+        vim.api.nvim_set_hl(0, "Normal", { bg = "#1f1f1f" }) -- Set background to #1f1f1f
+        vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#1f1f1f" })
+        vim.api.nvim_set_hl(0, "FloatBorder", { bg = "#1f1f1f" })
+        vim.api.nvim_set_hl(0, "Cursor", { fg = "#1f1f1f", bg = "#DDD8BB" }) -- Set cursor color to #DDD8BB
+    end,
+}
